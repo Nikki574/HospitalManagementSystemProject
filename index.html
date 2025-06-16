@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DIATON INSTITUTE OF MEDICAL SCIENCES</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/logo.png" alt="Logo">
+    </div>
+    <div id="theme">
+        <h1><strong>Diaton Institute Of Medical Sciences</strong></h1>
+        <h4>Affiliated to NTR University of Health Sciences</h4>
+        <h3>Leading Public Teaching Hospital in Vizianagaram, Providing Free Healthcare to All</h3>
+    </div>
+    <div class="container">
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="show-password">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="show-password">
+                    <span class="slider"></span>
+                </label>
+                <label for="show-password">Show Password</label>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <div class="registration-link">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('show-password').addEventListener('change', function() {
+            var passwordField = document.getElementById('password');
+            if (this.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        });
+    </script>
+</body>
+</html>

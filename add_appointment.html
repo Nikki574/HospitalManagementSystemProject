@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Appointments</h2>
+        <form action="add_appointment.php" method="post">
+            <div class="form-group">
+                <label for="patient_id">Patient ID:</label>
+                <input type="number" class="form-control" id="patient_id" name="patient_id" required>
+            </div>
+            <div class="form-group">
+                <label for="doctor_id">Doctor ID:</label>
+                <input type="number" class="form-control" id="doctor_id" name="doctor_id" required>
+            </div>
+            <div class="form-group">
+                <label for="appointment_date">Appointment Date:</label>
+                <input type="date" class="form-control" id="appointment_date" name="appointment_date" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Appointment</button>
+        </form>
+    </div>
+</body>
+</html>
